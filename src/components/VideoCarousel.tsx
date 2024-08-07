@@ -15,10 +15,10 @@ import { config } from "@/config";
 
 
 const getVideos = ():any => {
-  const res = fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqbqb795AZQ3Ulg7mvhAy3A&maxResults=15&key=${process.env.YT_API_KEY}`)
+  const res = fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqbqb795AZQ3Ulg7mvhAy3A&maxResults=15&key=MYAPIKEY`)
     .then((res)=>res.json())
     .then((data)=> {
-      console.log(data);
+      // console.log(data);
       
       return data
     })
@@ -54,7 +54,7 @@ const VideoCarousel: React.FC<PropType> = (props) => {
 //   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   const videos = getVideos()
-  console.log(videos);
+ 
   
 
   return (
@@ -62,12 +62,12 @@ const VideoCarousel: React.FC<PropType> = (props) => {
         <h2>Bio</h2>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container flex-col h-[480px] overflow-scroll">
-          {/* {videos.items.map((video:any)=>{
+          {videos.items.map((video:any)=>{
             <div className="embla__slide" key={video.snippet.title}>
                 <iframe src={`${video.id.videoId}`} ></iframe>
             </div>
           })
-          } */}
+          }
         </div>
       </div>
 

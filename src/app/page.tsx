@@ -17,8 +17,6 @@ const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
  
 
-console.log(process.env.YT_API_KEY);
-
 
 const Page = async () => {
   
@@ -28,7 +26,7 @@ const Page = async () => {
 
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       <BioCarousel options={BIOOPTIONS} />
-      <VideoCarousel options={VIDEOOPTIONS} />
+      <VideoCarousel options={VIDEOOPTIONS}  />
       
       {/* <BlogPostsPreview posts={result.posts} /> */}
       {/* <BlogPostsPagination pagination={result.pagination} /> */}
