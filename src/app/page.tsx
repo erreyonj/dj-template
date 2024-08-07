@@ -17,6 +17,9 @@ const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
  
 
+console.log(process.env.YT_API_KEY);
+
+
 const Page = async () => {
   
   return (
