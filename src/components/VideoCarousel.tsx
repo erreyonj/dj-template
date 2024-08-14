@@ -1,5 +1,5 @@
-'use client'
-import React, { useCallback } from 'react'
+
+import React, { useCallback, useEffect, useState } from 'react'
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import {
   PrevButton,
@@ -10,18 +10,27 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { config } from "@/config";
+import { error } from 'console'
 
 
 
 
-const getVideos = ():any => {
-  const res = fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqbqb795AZQ3Ulg7mvhAy3A&maxResults=15&key=MYAPIKEY`)
-    .then((res)=>res.json())
-    .then((data)=> {
-      // console.log(data);
+// const getVideos = ():Promise<any> => {  
+//   return fetch(`http://localhost:3000/api/videos`)
+//     .then((res)=>res.json())
+//     .then((data)=> {
+//       // console.log(data.items);
       
-      return data
-    })
+//       return data.items
+//     })
+// }
+
+async function getVideos(){
+  const res = await fetch('http://localhost:3000/api/videos')
+  const data = await res.json()
+  // console.log(data);
+  
+  return data
 }
 
 
@@ -29,9 +38,9 @@ type PropType = {
   options?: EmblaOptionsType
 }
 
-const VideoCarousel: React.FC<PropType> = (props) => {
+const VideoCarousel: React.FC<PropType> = async (props) => {
   const { options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  // const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
 //   const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
 //     const autoplay = false
@@ -53,21 +62,25 @@ const VideoCarousel: React.FC<PropType> = (props) => {
 //     onNextButtonClick
 //   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
-  const videos = getVideos()
+  const YTDATA = await getVideos()
+console.log(YTDATA);
+  
+  
+
  
   
 
   return (
     <section className="embla my-[100px]">
-        <h2>Bio</h2>
-      <div className="embla__viewport" ref={emblaRef}>
+        <h2>Media</h2>
+      <div className="embla__viewport" >
         <div className="embla__container flex-col h-[480px] overflow-scroll">
-          {videos.items.map((video:any)=>{
+          {/* {videos.videos.items.map((video:any)=>{
             <div className="embla__slide" key={video.snippet.title}>
-                <iframe src={`${video.id.videoId}`} ></iframe>
+                <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} ></iframe>
             </div>
           })
-          }
+          } */}
         </div>
       </div>
 
