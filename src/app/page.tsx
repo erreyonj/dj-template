@@ -18,7 +18,24 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
  
 
 
+async function getVideos(){
+  const res = await fetch('http://localhost:3000/api/videos')
+  const data = await res.json()
+  // console.log(data);
+  
+  return data
+}
+
+
+
+
 const Page = async () => {
+
+
+
+
+  const YTDATA = await getVideos()
+  
   
   return (
     <div className="container mx-auto px-5 mb-10">
@@ -26,7 +43,7 @@ const Page = async () => {
 
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       <BioCarousel options={BIOOPTIONS} />
-      <VideoCarousel options={VIDEOOPTIONS}  />
+      <VideoCarousel slides={YTDATA.videos} options={VIDEOOPTIONS}  />
       
       {/* <BlogPostsPreview posts={result.posts} /> */}
       {/* <BlogPostsPagination pagination={result.pagination} /> */}

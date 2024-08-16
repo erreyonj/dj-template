@@ -1,4 +1,3 @@
-
 import React, { useCallback, useEffect, useState } from 'react'
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import {
@@ -35,11 +34,12 @@ async function getVideos(){
 
 
 type PropType = {
+  slides: []
   options?: EmblaOptionsType
 }
 
 const VideoCarousel: React.FC<PropType> = async (props) => {
-  const { options } = props
+  const { slides , options } = props
   // const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
 //   const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
@@ -62,8 +62,8 @@ const VideoCarousel: React.FC<PropType> = async (props) => {
 //     onNextButtonClick
 //   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
-  const YTDATA = await getVideos()
-console.log(YTDATA);
+  // const YTDATA = await getVideos()
+  // console.log(YTDATA);
   
   
 
@@ -74,13 +74,14 @@ console.log(YTDATA);
     <section className="embla my-[100px]">
         <h2>Media</h2>
       <div className="embla__viewport" >
-        <div className="embla__container flex-col h-[480px] overflow-scroll">
-          {/* {videos.videos.items.map((video:any)=>{
+        <div className="embla__container flex-col h-[480px] overflow-scroll ">
+          {slides.map((video:any)=>{
             <div className="embla__slide" key={video.snippet.title}>
                 <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} ></iframe>
             </div>
           })
-          } */}
+          }
+
         </div>
       </div>
 
