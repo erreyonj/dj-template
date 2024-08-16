@@ -42,7 +42,7 @@ const BioCarousel: React.FC<PropType> = (props) => {
     <section className="embla my-[100px]">
         <h2>Bio</h2>
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container flex-col h-[480px] overflow-scroll">
+        <div className="embla__container flex-col">
           <div className="embla__slide w-full flex items-center my-10">
             <Image src={`/images/kevan-white.jpg`} alt='image' width={400} height={1}/>
           </div>

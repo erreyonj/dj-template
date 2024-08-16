@@ -43,7 +43,7 @@ const Page = async () => {
 
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       <BioCarousel options={BIOOPTIONS} />
-      <VideoCarousel slides={YTDATA.videos} options={VIDEOOPTIONS}  />
+      <VideoCarousel slides={YTDATA.videos.items} options={VIDEOOPTIONS}  />
       
       {/* <BlogPostsPreview posts={result.posts} /> */}
       {/* <BlogPostsPagination pagination={result.pagination} /> */}

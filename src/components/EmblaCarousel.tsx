@@ -23,7 +23,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     if (!autoplay) return
 
     const resetOrStop =
-      autoplay.options.stopOnInteraction === true
+      autoplay.options.stopOnInteraction === false
         ? autoplay.reset
         : autoplay.stop
 
@@ -43,7 +43,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
+            <div className="embla__slide border border-indigo-400" key={index}>
               <div className="embla__slide__number">{index + 1}</div>
             </div>
           ))}
