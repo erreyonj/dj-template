@@ -58,13 +58,13 @@ const VideoCarousel: React.FC<PropType> = (props) => {
   
   
   return (
-    <section className="embla my-[100px]">
-        <h2>Media</h2>
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container h-[480px]">
+    <section className="embla">
+        <h2 className='text-3xl md:text-5xl font-bold tracking-tighter leading-tight'>Media</h2>
+      <div className="embla__viewport mt-5" ref={emblaRef}>
+        <div className="embla__container mr-5">
           {slides.map((video:any)=>(
-            <div className="embla__slide" key={video.snippet.title}>
-                <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} height={300} width={340} ></iframe>
+            <div className="embla__slide video" key={video.snippet.title}>
+                <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} height={190} width={350} ></iframe>
             </div>
           ))
           }

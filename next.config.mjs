@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "imagedelivery.net",
       },
+      {
+        protocol: 'https',
+        hostname: 'thumbnailer.mixcloud.com',
+      },
     ],
   },
   redirects: async () => {

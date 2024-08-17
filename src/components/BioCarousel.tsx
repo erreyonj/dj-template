@@ -1,5 +1,5 @@
 'use client'
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import {
   PrevButton,
@@ -39,15 +39,18 @@ const BioCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <section className="embla my-[100px]">
-        <h2>Bio</h2>
+    <section className="embla">
+        <h2 className='text-3xl md:text-5xl font-bold tracking-tighter leading-tight'>Bio</h2>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container flex-col">
-          <div className="embla__slide w-full flex items-center my-10">
+          <div className="embla__slide w-full flex items-center mb-10 mt-3">
             <Image src={`/images/kevan-white.jpg`} alt='image' width={400} height={1}/>
           </div>
           <div className="embla__slide">
-            <p className=''>In Chicago, DJ KKHAALIQ is known as one of the most humble street jocks on the music seen. Born, Ke`vin Phillips he started DJing in '85 as a hobby. His greatest influence came in the person of the late Jam Master Jay (RIP). In 1990, KHAALIQ turned professional and started what is now known as KHAALIQ ENTERTAINMENT. He describes his style as, “Jesus speaking to the masses, in a slang language.” He has mastered the art of the LIVE show and views disc jockeying as a performance and not a service. Whereas some DJs sound great only on mix tapes and CDs, KHAALIQ scratches, blends, mixes, and excites the crowd, all LIVE. There are no special computers or pre-recorded sounds that he relies on. He depends solely on his passion, instinct, and a knack for the unexpected.</p>
+            <p className='m-1 h-52 overflow-scroll opacity-0 animate-fade [scale: 0.9] [animation-timeline:view()] [animation-range-start:cover] [animation-range-end:100px]'>In Chicago, DJ KKHAALIQ is known as one of the most humble street jocks on the music seen. Born, Ke`vin Phillips he started DJing in '85 as a hobby. His greatest influence came in the person of the late Jam Master Jay (RIP). In 1990, KHAALIQ turned professional and started what is now known as KHAALIQ ENTERTAINMENT. He describes his style as, “Jesus speaking to the masses, in a slang language.” He has mastered the art of the LIVE show and views disc jockeying as a performance and not a service. Whereas some DJs sound great only on mix tapes and CDs, KHAALIQ scratches, blends, mixes, and excites the crowd, all LIVE. There are no special computers or pre-recorded sounds that he relies on. He depends solely on his passion, instinct, and a knack for the unexpected.
+              <br />
+              <br />
+            </p>
           </div>
         </div>
       </div>
