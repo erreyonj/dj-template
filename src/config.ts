@@ -8,7 +8,7 @@ const buildConfig = () => {
   const ytAPIkey = process.env.YT_API_KEY;
 
   return {
-    baseUrl: process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
+    baseUrl: process.env.NEXT_PUBLIC_BASE_URL || "djkhaaliq.vercel.app",
     app: {
       name,
       copyright,
