@@ -15,7 +15,7 @@ export async function generateMetadata() {
       images: [
         signOgImageUrl({
           title: "Blog Post Categories",
-          brand: config.blog.name,
+          brand: config.app.name,
         }),
       ],
     },
