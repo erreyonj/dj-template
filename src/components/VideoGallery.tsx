@@ -2,7 +2,7 @@ import React from 'react'
 
 
 async function getVideos(){
-    const res = await fetch('/api/videos')
+    const res = await fetch('https://djkhaaliq.vercel.app/api/videos')
     const data = await res.json()
     return data
   }
