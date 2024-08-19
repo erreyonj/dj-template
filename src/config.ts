@@ -1,5 +1,5 @@
 const buildConfig = () => {
-  const blogId = process.env.NEXT_PUBLIC_APP_ID;
+  const blogId = process.env.NEXT_PUBLIC_APP_ID || 'DJ-Khaaliq';
   if (!blogId) throw new Error("NEXT_PUBLIC_APP_ID is missing");
   const name = process.env.NEXT_PUBLIC_APP_DISPLAY_NAME || 'DJ-Khaaliq';
   const copyright = process.env.NEXT_PUBLIC_APP_COPYRIGHT;
