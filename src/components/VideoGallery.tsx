@@ -13,7 +13,7 @@ const VideoGallery =  async () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 gap-5 h-[700px] overflow-scroll'>
         {YTDATA.videos.items.map((video:any)=>(
-            <div className="hover:animate-bounce mx-auto p-5" key={video.snippet.title}>
+            <div className="hover:animate-bounce mx-auto p-7" key={video.snippet.title}>
             <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} height={190} width={350} ></iframe>
         </div>
         ))}

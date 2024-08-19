@@ -19,7 +19,7 @@ const MIXDATA = await getMixes()
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 gap-5 h-[930px] overflow-scroll'>
         {MIXDATA.data.map((mix:any)=>(
-            <div key={mix.url} className='mx-auto p-5'>
+            <div key={mix.url} className='mx-auto p-7'>
                 <Link href={mix.url} className=''>
                     <Image src={mix.pictures.large} alt='Mixcloud thumbnail' width={380} height={200} />
               </Link>
