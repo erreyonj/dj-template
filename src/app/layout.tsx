@@ -8,23 +8,23 @@ import "./globals.css";
 
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-export const metadata: Metadata = {
-  title: {
-    absolute: config.app.metadata.title.absolute,
-    default: config.app.metadata.title.default,
-    template: config.app.metadata.title.template,
-  },
-  description: config.app.metadata.description,
-  openGraph: {
-    title: config.app.metadata.title.default,
-    description: config.app.metadata.description,
-    images: [
-      signOgImageUrl({
-        title: config.app.name,
-      }),
-    ]
-  }
-};
+// export const metadata: Metadata = {
+//   title: {
+//     absolute: config.app.metadata.title.absolute,
+//     default: config.app.metadata.title.default,
+//     template: config.app.metadata.title.template,
+//   },
+//   description: config.app.metadata.description,
+//   openGraph: {
+//     title: config.app.metadata.title.default,
+//     description: config.app.metadata.description,
+//     images: [
+//       signOgImageUrl({
+//         title: config.app.name,
+//       }),
+//     ]
+//   }
+// };
 
 export default function RootLayout({
   children,
