@@ -1,23 +1,27 @@
-
+import Link from 'next/link'
 
 const VideoBackground = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="">
     {/* Background Video */}
     <video 
       autoPlay 
       loop 
       muted 
       playsInline 
-      src="../public/dj-khaaliq-live.mp4"
-      className="absolute top-0 left-0 w-full h-full object-cover"
+      src="/bgVid-mobile-cut.mp4"
+      className=""
     >
-      <source src="/dj-khaaliq-live.mp4" type="video/mp4" />
     </video>
 
     {/* Content on top of the video */}
-    <div className="relative z-10 flex items-center justify-center h-full">
-      <h1 className="text-white text-4xl font-bold">DJ KHAALIQ</h1>
+
+    <h1 className=' text-white absolute z-30 flex items-center justify-center text-5xl md:text-6xl font-bold tracking-tighter leading-tight top-[18%] left-[27%]'>DJ Khaaliq</h1>
+
+    <div className="absolute z-30 flex items-center justify-center top-[78%] left-[40%]">
+      <Link href={`/`}>
+        <h1 className="text-white text-3xl font-bold border border-white animate-pulse p-3">Enter</h1>
+      </Link>
     </div>
   </div>
   )
