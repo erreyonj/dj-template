@@ -47,9 +47,9 @@ const Page = async () => {
     <div className="container mx-auto px-5 mb-10">
       <Header />
 
-      <MixCarousel slides={MIXDATA.data} options={MIXOPTIONS} />
+      {/* <MixCarousel slides={MIXDATA.data} options={MIXOPTIONS} /> */}
       <BioCarousel options={BIOOPTIONS} />
-      <VideoCarousel slides={topTenVids} options={VIDEOOPTIONS}  />
+      {/* <VideoCarousel slides={topTenVids} options={VIDEOOPTIONS}  /> */}
       
       {/* <BlogPostsPreview posts={result.posts} /> */}
       {/* <BlogPostsPagination pagination={result.pagination} /> */}

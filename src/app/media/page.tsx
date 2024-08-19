@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div>
         <Header />
-        <VideoGallery />
+        {/* <VideoGallery /> */}
         <Footer />
     </div>
   )
