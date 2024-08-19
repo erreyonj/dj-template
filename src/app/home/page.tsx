@@ -16,7 +16,7 @@ const VIDEOOPTIONS: EmblaOptionsType = { dragFree: true, loop: false }
 
 
 async function getVideos(){
-  const res = await fetch('http://localhost:3000/api/videos')
+  const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqbqb795AZQ3Ulg7mvhAy3A&maxResults=7&key=${process.env.YT_API_KEY}`)
   const data = await res.json()
   return data
 }
