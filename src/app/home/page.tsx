@@ -2,14 +2,12 @@ import { BlogPostsPreview } from "@/components/BlogPostPreview";
 import { BlogPostsPagination } from "@/components/BlogPostsPagination";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { wisp } from "@/lib/wisp";
 import MixCarousel from '@/components/MixCarousel'
 import BioCarousel from '@/components/BioCarousel'
 import VideoCarousel from "@/components/VideoCarousel";
 import Contact from "@/components/Contact";
 import { EmblaOptionsType } from 'embla-carousel'
 import '../../css/embla.css'
-import { error } from "console";
 
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }

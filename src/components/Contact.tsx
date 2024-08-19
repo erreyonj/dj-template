@@ -49,7 +49,7 @@ export default function Contact() {
             </button> */}
             <button
             type="submit"
-            className=" bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full md:w-[7rem]"
+            className=" bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full md:w-[7rem] border-[.5px] border-white"
             >
             Subscribe
             </button>
