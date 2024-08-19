@@ -34,13 +34,13 @@ async function getMixes(){
 
 const Page = async () => {
 
-  const YTDATA = await getVideos()
-  const MIXDATA = await getMixes()
-  const topTenVids = YTDATA.videos.items.map((video:any, i:number)=>{
-    if(i<=9){
-      return video
-    }
-  })
+  // const YTDATA = await getVideos()
+  // const MIXDATA = await getMixes()
+  // const topTenVids = YTDATA.videos.items.map((video:any, i:number)=>{
+    // if(i<=9){
+      // return video
+    // }
+  // })
   
   
   return (
