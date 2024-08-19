@@ -1,10 +1,9 @@
 const buildConfig = () => {
   const blogId = process.env.NEXT_PUBLIC_APP_ID;
   if (!blogId) throw new Error("NEXT_PUBLIC_APP_ID is missing");
-  const name = process.env.NEXT_PUBLIC_APP_DISPLAY_NAME;
+  const name = process.env.NEXT_PUBLIC_APP_DISPLAY_NAME || 'DJ-Khaaliq';
   const copyright = process.env.NEXT_PUBLIC_APP_COPYRIGHT;
-  const defaultTitle =
-    process.env.NEXT_DEFAULT_METADATA_DEFAULT_TITLE;
+  const defaultTitle = process.env.NEXT_DEFAULT_METADATA_DEFAULT_TITLE || 'DJ-Template';
   const defaultDescription = process.env.NEXT_PUBLIC_APP_DESCRIPTION;
   const ytAPIkey = process.env.YT_API_KEY;
 

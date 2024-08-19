@@ -21,8 +21,8 @@ export async function GET() {
   });
 
   const feed = new RSS({
-    title: config.blog.name,
-    description: config.blog.metadata.description,
+    title: config.app.name,
+    description: config.app.metadata.description,
     site_url: baseUrl,
     feed_url: urlJoin(baseUrl, "/rss"),
     pubDate: new Date(),
