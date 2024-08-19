@@ -41,7 +41,9 @@ const MixCarousel: React.FC<PropType> = (props) => {
 
   return (
     <section className="embla">
-      <h2 className='text-3xl md:text-5xl font-bold tracking-tighter leading-tight'>Mixes</h2>
+      <Link href={`/mixes`}>
+        <h2 className='text-3xl md:text-5xl font-bold tracking-tighter leading-tight'>Mixes</h2>
+      </Link>
       <div className="embla__viewport mt-5" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((mix,index) => (

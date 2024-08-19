@@ -9,8 +9,8 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import { config } from "@/config";
-import { error } from 'console'
+import Link from 'next/link'
+
 
 
 
@@ -59,7 +59,9 @@ const VideoCarousel: React.FC<PropType> = (props) => {
   
   return (
     <section className="embla">
+      <Link href={`/media`}>
         <h2 className='text-3xl md:text-5xl font-bold tracking-tighter leading-tight'>Media</h2>
+      </Link>
       <div className="embla__viewport mt-5" ref={emblaRef}>
         <div className="embla__container mr-5">
           {slides.map((video:any)=>(
