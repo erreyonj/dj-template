@@ -34,22 +34,22 @@ async function getMixes(){
 
 const Page = async () => {
 
-  // const YTDATA = await getVideos()
-  // const MIXDATA = await getMixes()
-  // const topTenVids = YTDATA.videos.items.map((video:any, i:number)=>{
-    // if(i<=9){
-      // return video
-    // }
-  // })
+  const YTDATA = await getVideos()
+  const MIXDATA = await getMixes()
+  const topTenVids = YTDATA.videos.items.map((video:any, i:number)=>{
+    if(i<=9){
+      return video
+    }
+  })
   
   
   return (
     <div className="container mx-auto px-5 mb-10">
       <Header />
 
-      {/* <MixCarousel slides={MIXDATA.data} options={MIXOPTIONS} /> */}
+      <MixCarousel slides={MIXDATA.data} options={MIXOPTIONS} />
       <BioCarousel options={BIOOPTIONS} />
-      {/* <VideoCarousel slides={topTenVids} options={VIDEOOPTIONS}  /> */}
+      <VideoCarousel slides={topTenVids} options={VIDEOOPTIONS}  />
       
       {/* <BlogPostsPreview posts={result.posts} /> */}
       {/* <BlogPostsPagination pagination={result.pagination} /> */}
