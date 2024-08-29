@@ -4,7 +4,7 @@ import VideoBackground from "@/components/VideoBackground"
 
 const page = () => {
   return (
-    <div>
+    <div className="">
 
       <VideoBackground />
     </div>

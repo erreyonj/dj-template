@@ -47,7 +47,7 @@ const MixCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport mt-5" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((mix,index) => (
-            <div className="embla__slide" key={mix.name}>
+            <div className="embla__slide md:pl-0" key={mix.name}>
               <Link href={mix.url} className=''>
                 <Image src={mix.pictures.large} alt='Mixcloud thumbnail' width={380} height={200} />
               </Link>

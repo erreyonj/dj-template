@@ -41,13 +41,18 @@ const Page = async () => {
       return video
     }
   })
+  const topTenMixes = MIXDATA.data.map((mix:any, i:number)=>{
+    if(i<=9){
+      return mix
+    }
+  })
   
   
   return (
     <div className="container mx-auto px-5 mb-10">
       <Header />
 
-      <MixCarousel slides={MIXDATA.data} options={MIXOPTIONS} />
+      <MixCarousel slides={topTenMixes} options={MIXOPTIONS} />
       <BioCarousel options={BIOOPTIONS} />
       <VideoCarousel slides={topTenVids} options={VIDEOOPTIONS}  />
       

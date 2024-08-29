@@ -2,9 +2,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
+import type { GetServerSideProps, Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// import { getServerSideProps } from "next/dist/build/templates/pages";
 
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -26,16 +27,18 @@ export const metadata: Metadata = {
   }
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
+          `min-h-screen bg-background font-sans antialiased max-w-6xl m-auto`,
           fontSans.variable
         )}
       >

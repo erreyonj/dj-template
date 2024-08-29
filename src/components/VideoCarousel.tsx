@@ -33,7 +33,7 @@ type PropType = {
 
 const VideoCarousel: React.FC<PropType> = (props) => {
   const { slides , options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options , [Autoplay( {delay: 3000})])
+  const [emblaRef, emblaApi] = useEmblaCarousel(options , [Autoplay( {delay: 4500})])
 
   const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
     const autoplay = emblaApi?.plugins()?.autoplay
